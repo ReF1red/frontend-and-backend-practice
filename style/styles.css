@@ -171,15 +171,6 @@ body {
  padding: 30px; /* Внутренние отступы */
  margin-top: 50px; /* Отступ сверху */
 }
-/* ===== ОБЩИЙ ЗАГОЛОВОК СТРАНИЦ ===== */
-.page-title {
-    font-size: 32px;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
 /* ===== НОВОСТИ ===== */
 .news-container {
     display: flex;
@@ -200,7 +191,6 @@ body {
 
 .news-card:hover {
     transform: translateX(5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .news-title {
@@ -244,7 +234,6 @@ body {
 
 .practice-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .practice-title {
@@ -421,6 +410,15 @@ body {
     transform: translateY(0);
 }
 
+/* ===== ОБЩИЕ СТИЛИ ===== */
+.page-title {
+    font-size: 32px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
 /* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
     .page-title {
@@ -468,15 +466,5 @@ body {
     .product-card {
         max-width: 300px;
         margin: 0 auto;
-    }
-    
-    .header {
-        padding: 20px;
-        font-size: 24px;
-    }
-    
-    .footer {
-        padding: 20px;
-        font-size: 14px;
     }
 }
