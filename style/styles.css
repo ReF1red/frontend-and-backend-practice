@@ -171,17 +171,107 @@ body {
  padding: 30px; /* Внутренние отступы */
  margin-top: 50px; /* Отступ сверху */
 }
-/* ===== СТРАНИЦА ТОВАРОВ ===== */
+/* ===== ОБЩИЙ ЗАГОЛОВОК СТРАНИЦ ===== */
+.page-title {
+    font-size: 32px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* ===== НОВОСТИ ===== */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #2c3e50;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.news-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.news-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.news-meta {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.news-text {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ===== ПРАКТИКИ ===== */
+.practices-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.practice-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.practice-title {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.practice-desc {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ===== ТОВАРЫ ===== */
 .products-section {
     padding: 20px 0;
 }
 
 .section-title {
-    font-size: 32px;
+    font-size: 28px;
     color: #2c3e50;
     text-align: center;
     margin-bottom: 15px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .section-description {
@@ -205,14 +295,13 @@ body {
 .product-card {
     background: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 0;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     border: 1px solid #eaeaea;
-    text-align: center;
-    height: 100%;
+    overflow: hidden;
 }
 
 .product-card:hover {
@@ -221,17 +310,15 @@ body {
 }
 
 .product-image-container {
-    margin-bottom: 15px;
     overflow: hidden;
-    border-radius: 10px;
+    height: 200px;
 }
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border-radius: 10px;
 }
 
 .product-card:hover .product-image {
@@ -239,6 +326,7 @@ body {
 }
 
 .product-info {
+    padding: 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -247,7 +335,7 @@ body {
 .product-name {
     font-size: 22px;
     color: #2c3e50;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     font-weight: 600;
 }
 
@@ -255,7 +343,7 @@ body {
     color: #7f8c8d;
     font-size: 14px;
     line-height: 1.5;
-    margin: 10px 0;
+    margin: 0 0 15px 0;
     flex-grow: 1;
 }
 
@@ -263,7 +351,7 @@ body {
     font-size: 24px;
     color: #667eea;
     font-weight: 700;
-    margin: 15px 0;
+    margin: 10px 0 20px 0;
 }
 
 .product-button {
@@ -277,7 +365,6 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
-    margin-top: auto;
 }
 
 .product-button:hover {
@@ -289,25 +376,91 @@ body {
     transform: scale(0.98);
 }
 
-/* ===== АДАПТИВНОСТЬ ДЛЯ ТОВАРОВ ===== */
+/* ===== КОНТАКТЫ ===== */
+.contacts-container {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contacts-container p {
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.contacts-container strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
-    .products-grid {
+    .page-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .products-grid,
+    .practices-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
     }
     
-    .section-title {
-        font-size: 28px;
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
     
-    .section-description {
-        font-size: 16px;
-        padding: 0 20px;
+    .nav-link {
+        padding: 10px 20px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .contacts-container {
+        padding: 25px;
+        margin: 0 20px;
+    }
+    
+    .product-image-container {
+        height: 180px;
     }
 }
 
 @media (max-width: 480px) {
-    .products-grid {
+    .products-grid,
+    .practices-container {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -315,5 +468,15 @@ body {
     .product-card {
         max-width: 300px;
         margin: 0 auto;
+    }
+    
+    .header {
+        padding: 20px;
+        font-size: 24px;
+    }
+    
+    .footer {
+        padding: 20px;
+        font-size: 14px;
     }
 }
